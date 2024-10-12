@@ -11,13 +11,13 @@ class EmployeesListItem extends Component {
     }
 
     onIncrease = () => {
-        this.setState(({increase})=>({
+        this.setState(({increase}) => ({
             increase: !increase
         }))
     }
 
     onRise = () => {
-        this.setState(({hasStar})=>({
+        this.setState(({hasStar}) => ({
             hasStar: !hasStar
         }))
     }
@@ -25,13 +25,13 @@ class EmployeesListItem extends Component {
 
     render() {
         const {name, salary} = this.props;
-        const {increase,hasStar} = this.state;
+        const {increase, hasStar} = this.state;
         let classNames = "list-group-item d-flex justify-content-between";
         if (increase) {
             classNames += " increase";
         }
-        if (hasStar){
-            classNames +=' like';
+        if (hasStar) {
+            classNames += ' like';
         }
 
 
